@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <title>王若宇</title>
+    <!-- Font Family -->
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap"
       rel="stylesheet"
@@ -12,13 +13,44 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- awesome fonts -->
+    <script src="https://kit.fontawesome.com/e85f81cf3f.js" crossorigin="anonymous"></script>
 
-    <title>王若宇</title>
+    <!-- Theme -->
     <link id="theme-style" rel="stylesheet" type="text/css" href="/css/purple-theme.css" />
+    <!-- Default Decoration -->
     <link rel="stylesheet" href="/css/default.css" />
   </head>
   <body>
     <section class="s1">
+      <div class="menubar">
+        <div class="menubar-l">
+          <ul>
+            <li style="font-size: 1.3rem;"> <i class="fab fa-apple"></i></li>
+            <li> Finder </li>
+            <li> File </li>
+            <li> Edit  </li>
+            <li> View </li>
+            <li> Go </li>
+            <li> Window </li>
+            <li> Help </li>
+          </ul>
+        </div>  
+        <div class="menubar-r">
+          <ul>
+            <li><i class="fas fa-wifi"></i></li>
+            <li><span style="font-size: 0.8rem;">100%</span> <i class="fas fa-battery-full" style="vertical-align:bottom"></i></li>
+            <li> Ruoyu Wang</li>
+            <li> <time id="menuTime"></time></li>
+            <li> <i class="fas fa-search"></i></li>
+          </ul>
+          
+        </div> 
+       
+      </div>
+    </section>
+
+    <section class="s2">
       <div class="container">
         <div class="greeting-wrapper">
           <h1>你好，我是王若宇</h1>
@@ -26,9 +58,10 @@
         <div class="intro-wrapper">
           <div class="navbar">
             <div class="dot-wrapper">
-              <div id="dot-1" class="dot"></div>
-              <div id="dot-2" class="dot"></div>
-              <div id="dot-3" class="dot"></div>
+              <div id="dot-1" name="close" class="dot"><i class="fas fa-times"></i></div>
+
+              <div id="dot-2" name="zoomout" class="dot"><i class="fas fa-minus"></i></i></div>
+              <div id="dot-3" name="zoomin" class="dot"><i class="fas fa-expand-alt"></i></div>
             </div>
             <ul class="contact-wrapper">
               <li>
@@ -67,12 +100,25 @@
                   <div id="corner-br" class="corner"></div>
                 </div>
               </div>
+              <h2 style="text-align: center;">FUN</h2>
+              <ul>
+                <a target="_blank" href="/pages/drum/index.html">鼓</a>
+                <a target="_blank" href="/pages/clock/index.html">钟</a>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="s2">
+    <section class="s3">
+        <ul class="footer">
+          <li><i class="fab fa-github"></i></li>
+          <li><i class="fab fa-react"></i></li>
+          <li><i class="fab fa-vuejs"></i></li>
+          <li><i class="fab fa-node"></i></li>        
+        </ul>
+    </section>
+    <!-- <section class="s2">
       <div class="container">
         <div class="about-wrapper">
           <div class="about-me">
@@ -85,28 +131,29 @@
             <hr />
             <h2>Lorem ipsum dolor sit amet</h2>
             <p>Resume <a href="#" target="_blank">Download Resume</a></p>
-            <div id="skills-wrapper">
-              <ul class="skills-left">
-                <li>1</li>
-                <li>2</li>
-              </ul>
-              <ul class="skills-right">
-                <li>3</li>
-                <li>4</li>
-              </ul>
+            <div class="skills-wrapper">
+                <ul class="skills-content">
+                  <li><i class="fab fa-github"></i></li>
+                  <li><i class="fab fa-react"></i></li>
+                  <li><i class="fab fa-vuejs"></i></li>
+                  <li><i class="fab fa-node"></i></li>
+                  <li><i class="fab fa-python"></i></li>
+                  <li><i class="fab fa-bootstrap"></i></li>
+                  <li><i class="fab fa-sass"></i></li>
+                  <li><i class="fab fa-less"></i></li>              
+                </ul>
             </div>
           </div>
           <div class="music-wrapper">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ullam sed in atque
-              suscipit enim quas, repellat quam aliquid sint nihil eum molestias mollitia recusandae
-              distinctio fuga quod, voluptas alias!
+              
             </p>
+            
           </div>
         </div>
       </div>
-    </section>
-    <section class="s1">
+    </section> -->
+    <!-- <section class="s1">
       <div class="portfolio-wrapper">
         <h2 style="text-align: center;">一些项目</h2>
         <main>
@@ -137,7 +184,7 @@
           </ul>
         </main>
       </div>
-    </section>
+    </section> -->
     <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

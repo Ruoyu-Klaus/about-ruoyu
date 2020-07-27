@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #164d56;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+
+  .clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #ddd;
+    position: relative;
+    z-index: 0;
+    &::after {
+      content: '';
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      border-radius: 50%;
+      background-color: #164d56;
+      z-index: -1;
+    }
+    .hour {
+      width: 4px;
+      background: #fff;
+      height: 15%;
+      bottom: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      transform-origin: bottom;
+    }
+    .minute {
+      width: 4px;
+      background: #fff;
+      height: 25%;
+      bottom: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      transform-origin: bottom;
+    }
+    .second {
+      width: 4px;
+      background: #fff;
+      height: 35%;
+      bottom: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      transform-origin: bottom;
+    }
+    // draw inner circle as lines container
+    .inner-circle {
+      width: 80%;
+      height: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      position: absolute;
+      content: 'innerCirle';
+      z-index: 0;
+      // draw cover circle for covering lines
+      &::before {
+        content: '';
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        border-radius: 50%;
+        background: #164d56;
+        z-index: 2;
+      }
+      // draw center point
+      &::after {
+        content: '';
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        background-color: #fff;
+      }
+      // draw lines
+      > .line {
+        width: 4px;
+        background: #fff;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        z-index: 1;
+        &:nth-child(1) {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(-50%) rotate(30deg);
+        }
+        &:nth-child(3) {
+          transform: translateX(-50%) rotate(60deg);
+        }
+        &:nth-child(4) {
+          transform: translateX(-50%) rotate(90deg);
+        }
+        &:nth-child(5) {
+          transform: translateX(-50%) rotate(120deg);
+        }
+        &:nth-child(6) {
+          transform: translateX(-50%) rotate(150deg);
+        }
+      }
+    }
+  }
+}
