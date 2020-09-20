@@ -39,7 +39,6 @@ const root = document.documentElement;
 
 /* 
   Responsive font-size | nav-bar
-  Clock for real time
 */
 
 (function (document, root) {
