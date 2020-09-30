@@ -1,0 +1,35 @@
+@import '../color';
+.theme-options-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  .theme-dot {
+    background-color: $black;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--themeDotBorder);
+    margin: 5px;
+    cursor: pointer;
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    &:hover {
+      border-width: 4px;
+    }
+  }
+  #light-mode {
+    background-color: #fff;
+  }
+  #blue-mode {
+    background-color: #192734;
+  }
+  #navy-mode {
+    background-color: #7886eb;
+  }
+  #green-mode {
+    background-color: #78866b;
+  }
+  #purple-mode {
+    background-color: #7e4c74;
+  }
+}

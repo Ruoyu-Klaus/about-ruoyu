@@ -37,7 +37,6 @@ const themes = {
     themeDotBorder: '#fff',
     previewBg: 'rgba(109, 133, 160, 0.81)',
     previewShadow: 'rgb(107, 123, 167)',
-
     buttonColor: '#17a2b8',
   },
   green: {
