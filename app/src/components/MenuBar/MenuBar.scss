@@ -1,0 +1,40 @@
+@import '../../color';
+.menubar {
+  background-color: rgba(147, 151, 154, 0.4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  span {
+    font-size: 1.2rem;
+  }
+  color: var(--secondaryText);
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      cursor: pointer;
+      padding-right: 1.2rem;
+      a {
+        color: var(--secondaryText);
+      }
+    }
+  }
+  .menubar-l {
+    padding-right: 1.2rem;
+    display: flex;
+    margin-right: auto;
+    i {
+      padding-left: 1rem;
+      margin-right: 2rem;
+      font-size: 2rem;
+    }
+  }
+  .menubar-r {
+    > i {
+      display: none;
+    }
+  }
+}

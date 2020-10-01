@@ -392,14 +392,14 @@
         }
       }
     }
-  }
-  .s1 .menubar-r {
-    > ul {
-      display: none;
-    }
-    > #mobile-menu {
-      margin-right: 2rem;
-      display: block;
+    .menubar-r {
+      > ul {
+        display: none;
+      }
+      > #mobile-menu {
+        margin-right: 2rem;
+        display: block;
+      }
     }
   }
 }

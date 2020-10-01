@@ -49,7 +49,6 @@ const root = document.documentElement;
   };
   function setFontSize() {
     var cWidth = root.clientWidth;
-    ('#mobile-menu');
     if (cWidth <= 414) {
       root.style.fontSize = cWidth / 37.5 + 'px';
     } else {

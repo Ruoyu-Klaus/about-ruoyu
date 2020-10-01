@@ -1,0 +1,54 @@
+@import '../../color';
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid var(--borderColor);
+  background-color: var(--mainColor);
+  > .dot-wrapper {
+    display: flex;
+    padding-left: 1rem;
+    > .dot {
+      background-color: $black;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      margin: 0.5rem;
+      -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+      position: relative;
+      i {
+        font-size: 1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: lighten($lightblack, 10%);
+        display: none;
+      }
+    }
+    #dot-1 {
+      background-color: $appleExit;
+    }
+    #dot-2 {
+      background-color: $appleZoomOut;
+    }
+    #dot-3 {
+      background-color: $appleZoomIn;
+    }
+  }
+  > .contact-wrapper {
+    margin: 0;
+    padding-right: 1rem;
+    font-size: 1.6rem;
+    li {
+      display: inline-block;
+      margin: 0.5rem;
+    }
+  }
+}
