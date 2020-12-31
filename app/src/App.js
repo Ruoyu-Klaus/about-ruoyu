@@ -4,6 +4,7 @@ import './App.scss';
 import themeContext from './context/theme/themeContext';
 import ThemeDot from './components/ThemeDot/ThemeDot';
 import MenuBar from './components/MenuBar/MenuBar';
+import Avatar from './components/Avatar/Avatar';
 import WindowContainer from './container/WindowContainer';
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
           <WindowContainer
             className='window-container'
             ThemeDot={<ThemeDot changeTheme={changeTheme} />}
+            Avatar={<Avatar />}
           />
         </div>
       </section>
