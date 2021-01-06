@@ -15,6 +15,7 @@
     justify-content: space-between;
     align-items: center;
     li {
+      width: fit-content;
       cursor: pointer;
       padding-right: 1.2rem;
       a {
@@ -33,6 +34,9 @@
     }
   }
   .menubar-r {
+    li:nth-last-of-type(2) {
+      width: 12rem;
+    }
     > i {
       display: none;
     }

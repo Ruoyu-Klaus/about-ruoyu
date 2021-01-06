@@ -55,6 +55,7 @@
   background-color: var(--mainColor);
   border-bottom: 1px solid var(--borderColor);
   flex: 1;
+  overflow-y: scroll;
   .greeting-wrapper {
     font-size: 2.5rem;
     letter-spacing: 0.3rem;
@@ -63,7 +64,7 @@
     height: 10vh;
   }
   .window-container {
-    min-height: 50rem;
+    min-height: 60rem;
     height: 100%;
     background-color: var(--secondaryColor);
     border: 1px solid var(--borderColor);

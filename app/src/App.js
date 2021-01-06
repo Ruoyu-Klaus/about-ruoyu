@@ -2,9 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import './_common.scss';
 import './App.scss';
 import themeContext from './context/theme/themeContext';
-import ThemeDot from './components/ThemeDot/ThemeDot';
 import MenuBar from './components/MenuBar/MenuBar';
-import Avatar from './components/Avatar/Avatar';
 import WindowContainer from './container/WindowContainer';
 
 function App() {
@@ -56,6 +54,7 @@ function App() {
     let mode = e.target.dataset.mode;
     mode && setMode(mode);
   };
+
   return (
     <div className='main'>
       <section className='s1'>
@@ -66,11 +65,9 @@ function App() {
           <div className='greeting-wrapper'>
             <h1>你好，我是王若宇</h1>
           </div>
-          <WindowContainer
-            className='window-container'
-            ThemeDot={<ThemeDot changeTheme={changeTheme} />}
-            Avatar={<Avatar />}
-          />
+          <div className='window-container'>
+            <WindowContainer changeTheme={changeTheme} />
+          </div>
         </div>
       </section>
       <section className='s3'>

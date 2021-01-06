@@ -1,6 +1,51 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './WindowNavBar.scss';
-function WindowNavBar() {
+function WindowNavBar(props) {
+  useEffect(() => {
+    const windowContainer = document.querySelector(`.navbar`).parentElement;
+    // Handle apple window dots
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(dot => {
+      dot.addEventListener('mouseover', function () {
+        document
+          .querySelectorAll('.dot > i')
+          .forEach(i => (i.style.display = 'block'));
+      });
+      dot.addEventListener('click', function () {
+        const name = this.getAttribute('name');
+        switch (name) {
+          case 'close':
+            console.log('close');
+            return;
+          case 'zoomout':
+            return;
+          case 'zoomin':
+            if (windowContainer.requestFullscreen) {
+              windowContainer.requestFullscreen();
+            } else if (windowContainer.webkitRequestFullscreen) {
+              /* Safari */
+              windowContainer.webkitRequestFullscreen();
+            } else if (windowContainer.msRequestFullscreen) {
+              /* IE11 */
+              windowContainer.msRequestFullscreen();
+            }
+            return;
+        }
+      });
+      dot.addEventListener('mouseout', function () {
+        document
+          .querySelectorAll('.dot > i')
+          .forEach(i => (i.style.display = 'none'));
+      });
+    });
+    return () => {
+      dots.forEach(dot => {
+        dot.removeEventListener('mouseover');
+        dot.removeEventListener('click');
+        dot.removeEventListener('mouseout');
+      });
+    };
+  }, []);
   return (
     <div className='navbar'>
       <div className='dot-wrapper'>
@@ -25,17 +70,29 @@ function WindowNavBar() {
           </a>
         </li>
         <li>
-          <a target='_blank' rel='noopener noreferrer' href='http://wangruoyu.digital'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='http://wangruoyu.digital'
+          >
             博客
           </a>
         </li>
         <li>
-          <a target='_blank' rel='noopener noreferrer' href='https://github.com/Ruoyu-Klaus'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/Ruoyu-Klaus'
+          >
             Github
           </a>
         </li>
         <li>
-          <a target='_blank' rel='noopener noreferrer' href='mailto:ruoyuwangruoyu@hotmail.com'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='mailto:ruoyuwangruoyu@hotmail.com'
+          >
             邮箱
           </a>
         </li>

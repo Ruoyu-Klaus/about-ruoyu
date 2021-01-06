@@ -1,64 +1,31 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import WindowNavBar from '../components/WindowNavBar/WindowNavBar';
+import ThemeDot from '../components/ThemeDot/ThemeDot';
+import Avatar from '../components/Avatar/Avatar';
 import './WindowContainer.scss';
 
 function WindowContainer(props) {
-  const { ThemeDot, Avatar, className } = props;
-  useEffect(() => {
-    //
-    const windowContainer = document.querySelector(`.${className}`);
-    // Handle apple window dots
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach(dot =>
-      dot.addEventListener('mouseover', function () {
-        document
-          .querySelectorAll('.dot > i')
-          .forEach(i => (i.style.display = 'block'));
-      })
-    );
-    dots.forEach(dot =>
-      dot.addEventListener('click', function () {
-        const name = this.getAttribute('name');
-        switch (name) {
-          case 'close':
-            console.log('close');
-            return;
-          case 'zoomout':
-            return;
-          case 'zoomin':
-            if (windowContainer.requestFullscreen) {
-              windowContainer.requestFullscreen();
-            } else if (windowContainer.webkitRequestFullscreen) {
-              /* Safari */
-              windowContainer.webkitRequestFullscreen();
-            } else if (windowContainer.msRequestFullscreen) {
-              /* IE11 */
-              windowContainer.msRequestFullscreen();
-            }
-            return;
-        }
-      })
-    );
-    dots.forEach(dot =>
-      dot.addEventListener('mouseout', function () {
-        document
-          .querySelectorAll('.dot > i')
-          .forEach(i => (i.style.display = 'none'));
-      })
-    );
-  }, []);
+  const { changeTheme } = props;
+
   return (
-    <div className={className}>
+    <>
       <WindowNavBar />
       <div id='contentContainer'>
         <div className='leftContent'>
           <div>lorem</div>
-          {ThemeDot}
+          <ThemeDot changeTheme={changeTheme} />
         </div>
-        <div className='rightContent'>{Avatar}</div>
+        <div className='rightContent'>
+          <Avatar />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
+
+WindowContainer.proptype = {
+  changeTheme: PropTypes.func.isRequired,
+};
 
 export default WindowContainer;
