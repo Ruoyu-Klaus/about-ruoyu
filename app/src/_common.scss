@@ -55,3 +55,9 @@ body {
     width: 98%;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .container {
+    width: 95%;
+  }
+}

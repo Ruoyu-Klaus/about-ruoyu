@@ -63,7 +63,7 @@ function App() {
       <section className='s2'>
         <div className='container'>
           <div className='greeting-wrapper'>
-            <h1>你好，我是王若宇</h1>
+            {/* <h1>你好，我是王若宇</h1> */}
           </div>
           <div className='window-container'>
             <WindowContainer changeTheme={changeTheme} />

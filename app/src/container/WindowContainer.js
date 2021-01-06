@@ -11,14 +11,12 @@ function WindowContainer(props) {
   return (
     <>
       <WindowNavBar />
-      <div id='contentContainer'>
+      <div className='contentContainer'>
         <div className='leftContent'>
-          <div>lorem</div>
+          <Avatar />
           <ThemeDot changeTheme={changeTheme} />
         </div>
-        <div className='rightContent'>
-          <Avatar />
-        </div>
+        <div className='rightContent'>lorem</div>
       </div>
     </>
   );

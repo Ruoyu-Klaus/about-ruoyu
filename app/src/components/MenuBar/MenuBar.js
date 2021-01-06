@@ -14,9 +14,9 @@ function MenuBar() {
       let m = today.getMinutes();
       let s = today.getSeconds();
       let dayArr = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
-      document.getElementById('menuTime').innerHTML = `${dayArr[day]} ${concatZero(h)}:${concatZero(
-        m
-      )}:${concatZero(s)}`;
+      document.querySelector('.menuTime time').innerHTML = `${
+        dayArr[day]
+      } ${concatZero(h)}:${concatZero(m)}:${concatZero(s)}`;
     }
     setInterval(() => {
       showTime();
@@ -41,16 +41,16 @@ function MenuBar() {
       </div>
       <div className='menubar-r'>
         <ul>
-          <li>
+          <li className='wifi'>
             <i className='fas fa-wifi'></i>
           </li>
-          <li>
-            <span>100%</span>{' '}
-            <i className='fas fa-battery-full' style={{ verticalAlign: 'bottom' }}></i>
+          <li className='battery'>
+            <i className='fas fa-battery-full'></i>{' '}
+            <span className='battery-percentage'>100%</span>
           </li>
-          <li> Ruoyu Wang</li>
-          <li>
-            <time id='menuTime'></time>
+          <li className='author'> Ruoyu Wang</li>
+          <li className='menuTime'>
+            <time></time>
           </li>
           <li>
             <i className='fas fa-search'></i>

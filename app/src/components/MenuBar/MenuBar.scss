@@ -27,6 +27,7 @@
     padding-right: 1.2rem;
     display: flex;
     margin-right: auto;
+    align-items: center;
     i {
       padding-left: 1rem;
       margin-right: 2rem;
@@ -34,11 +35,50 @@
     }
   }
   .menubar-r {
-    li:nth-last-of-type(2) {
+    .wifi {
+      font-size: 2rem;
+    }
+    .battery {
+      display: flex;
+      i {
+        margin-right: 0.2rem;
+      }
+      .battery-percentage {
+        font-size: 1.2rem;
+      }
+    }
+    .menuTime {
       width: 12rem;
     }
     > i {
       display: none;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .menubar {
+    .menubar-l {
+      ul {
+        display: none;
+      }
+    }
+    .menubar-r {
+      position: relative;
+      .wifi {
+        position: absolute;
+        right: 0.2rem;
+      }
+      .author {
+        display: none;
+      }
+      .menuTime {
+        font-size: 1.2rem;
+        width: 10rem;
+        margin-right: 2rem;
+      }
+      li:last-child {
+        display: none;
+      }
     }
   }
 }

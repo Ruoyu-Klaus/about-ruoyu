@@ -2,11 +2,11 @@
 .theme-options-wrapper {
   display: flex;
   justify-content: space-evenly;
-  width: 150px;
+  width: fit-content;
   .theme-dot {
     background-color: $black;
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
     border: 2px solid var(--themeDotBorder);
     margin: 5px;
@@ -32,5 +32,14 @@
   }
   #purple-mode {
     background-color: #7e4c74;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .theme-options-wrapper {
+    .theme-dot {
+      height: 2rem;
+      width: 2rem;
+    }
   }
 }

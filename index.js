@@ -78,9 +78,9 @@ const root = document.documentElement;
     let m = today.getMinutes();
     let s = today.getSeconds();
     let dayArr = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
-    document.getElementById('menuTime').innerHTML = `${dayArr[day]} ${concatZero(h)}:${concatZero(
-      m
-    )}:${concatZero(s)}`;
+    document.querySelector('.menuTime time').innerHTML = `${
+      dayArr[day]
+    } ${concatZero(h)}:${concatZero(m)}:${concatZero(s)}`;
   }
   setInterval(() => {
     showTime();
@@ -91,7 +91,9 @@ const root = document.documentElement;
 const dots = document.querySelectorAll('.dot');
 dots.forEach(dot =>
   dot.addEventListener('mouseover', function () {
-    document.querySelectorAll('.dot > i').forEach(i => (i.style.display = 'block'));
+    document
+      .querySelectorAll('.dot > i')
+      .forEach(i => (i.style.display = 'block'));
   })
 );
 dots.forEach(dot =>
@@ -112,7 +114,9 @@ dots.forEach(dot =>
 );
 dots.forEach(dot =>
   dot.addEventListener('mouseout', function () {
-    document.querySelectorAll('.dot > i').forEach(i => (i.style.display = 'none'));
+    document
+      .querySelectorAll('.dot > i')
+      .forEach(i => (i.style.display = 'none'));
   })
 );
 

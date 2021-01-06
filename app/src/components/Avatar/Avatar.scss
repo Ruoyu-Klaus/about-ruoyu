@@ -1,0 +1,19 @@
+.avatar {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  border-radius: 5px;
+  object-fit: cover;
+  border: 1px solid var(--borderColor);
+  -webkit-box-shadow: 12px 11px 25px -14px rgba(66, 66, 66, 0.75);
+  -moz-box-shadow: 12px 11px 25px -14px rgba(66, 66, 66, 0.75);
+  box-shadow: 12px 11px 25px -14px rgba(66, 66, 66, 0.75);
+  margin: 20px;
+}
+
+@media screen and (max-width: 420px) {
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+}
