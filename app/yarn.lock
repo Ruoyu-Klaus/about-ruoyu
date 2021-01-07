@@ -9091,10 +9091,10 @@ react@^16.13.1:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
 
-react_simple_typist@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/react_simple_typist/-/react_simple_typist-1.0.3.tgz#06af29859d7f2596ea0d9b133c3221f7efe1d87a"
-  integrity sha512-4W6llInmmBzTQ6Xb4bZEHdlrgoWLTWbCQFpka/EIOR+lrzJj+Sz4cQfiW7GBxKvgJQXBAo6P45sp5qrlLf27Mg==
+react_simple_typist@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/react_simple_typist/-/react_simple_typist-1.1.0.tgz#442dd8f6aa5fab17e7714b1ee2ad232082ce1247"
+  integrity sha512-c3+SEqjC6tw0aDh3i2M2bp3G1oK/gJfUH4uDNK4hmPj3Hfg3cBJwLaugp+TCnDzrDoTFl5c+NbwnkCZePqWtgQ==
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
