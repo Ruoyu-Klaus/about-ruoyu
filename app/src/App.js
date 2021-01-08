@@ -12,7 +12,6 @@ function App() {
     localTheme && setTheme(localTheme);
   }, []);
   useEffect(() => {
-    console.log(Object.entries(theme));
     Object.entries(theme).forEach(color => {
       document.documentElement.style.setProperty(`--${color[0]}`, color[1]);
     });
@@ -71,7 +70,7 @@ function App() {
         </div>
       </section>
       <section className='s3'>
-        <h1>footer</h1>
+        <p>Copyright © Ruoyu Wang {new Date().getFullYear()}</p>
       </section>
     </div>
   );

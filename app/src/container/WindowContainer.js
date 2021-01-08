@@ -15,7 +15,13 @@ function WindowContainer(props) {
       <div className='contentContainer'>
         <div className='leftContent'>
           <Avatar />
+          <h1>主题</h1>
           <ThemeDot changeTheme={changeTheme} />
+          <hr></hr>
+          <p>
+            你的更改会被保存 <br />
+            下次访问仍然有效
+          </p>
         </div>
         <div className='rightContent'>
           <Intro />
