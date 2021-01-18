@@ -26,6 +26,9 @@ function WindowContainer(props) {
         <div className='rightContent'>
           <Intro />
         </div>
+
+        {/* <iframe allow="fullscreen" width="100%" src="https://wangruoyu.digital" frameBorder="0"></iframe> */}
+        {/* <iframe allow="fullscreen" width="100%" src="https://github.com/Ruoyu-Klaus" frameBorder="0"></iframe> */}
       </div>
     </>
   );
