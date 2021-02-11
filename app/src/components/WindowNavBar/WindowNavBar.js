@@ -2,22 +2,30 @@ import React, { useEffect } from 'react';
 import './WindowNavBar.scss';
 function WindowNavBar(props) {
   useEffect(() => {
-    const windowContainer = document.querySelector(`.navbar`).parentElement;
+    const windowContainer = document.querySelector(`.window-container`);
+    const mask = document.querySelector(`.mask`);
+    mask.addEventListener('click', function () {
+      document.querySelector('.mask').style.display = 'none';
+      windowContainer.classList.remove('minimized');
+      windowContainer.classList.add('backFromMinimized');
+
+    })
     // Handle apple window dots
     const dots = document.querySelectorAll('.dot');
     dots.forEach(dot => {
-      dot.addEventListener('mouseover', function () {
-        document
-          .querySelectorAll('.dot > i')
-          .forEach(i => (i.style.display = 'block'));
-      });
       dot.addEventListener('click', function () {
         const name = this.getAttribute('name');
         switch (name) {
           case 'close':
-            console.log('close');
+            if (document.fullscreenElement) {
+              document.exitFullscreen().catch((err) => console.error(err))
+            }
             return;
           case 'zoomout':
+            document.querySelector('.mask').style.display = 'block';
+            windowContainer.classList.add('minimized');
+            windowContainer.classList.remove('backFromMinimized');
+
             return;
           case 'zoomin':
             if (windowContainer.requestFullscreen) {
@@ -32,20 +40,15 @@ function WindowNavBar(props) {
             return;
         }
       });
-      dot.addEventListener('mouseout', function () {
-        document
-          .querySelectorAll('.dot > i')
-          .forEach(i => (i.style.display = 'none'));
-      });
     });
     return () => {
       dots.forEach(dot => {
-        dot.removeEventListener('mouseover');
         dot.removeEventListener('click');
-        dot.removeEventListener('mouseout');
       });
     };
   }, []);
+
+  const { handleWindowNavBarItem } = props
   return (
     <div className='navbar'>
       <div className='dot-wrapper'>
@@ -64,16 +67,29 @@ function WindowNavBar(props) {
           <a
             target='_blank'
             rel='noopener noreferrer'
-            href='https://i.loli.net/2020/07/03/WklZBzG2MxepQyg.jpg'
+            onClick={handleWindowNavBarItem}
+            data-href='https://i.loli.net/2020/07/03/WklZBzG2MxepQyg.jpg'
           >
-            微信
+            首页
           </a>
         </li>
         <li>
           <a
             target='_blank'
             rel='noopener noreferrer'
-            href='http://wangruoyu.digital'
+            onClick={handleWindowNavBarItem}
+            data-href='https://i.loli.net/2020/07/03/WklZBzG2MxepQyg.jpg'
+          >
+            作品
+          </a>
+        </li>
+        <li>
+
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            onClick={handleWindowNavBarItem}
+            data-href='http://wangruoyu.digital'
           >
             博客
           </a>

@@ -11,6 +11,11 @@
   > .dot-wrapper {
     display: flex;
     padding-left: 1rem;
+    &:hover{
+      > .dot > i {
+        visibility: visible;
+      }
+    }
     > .dot {
       background-color: $black;
       height: 1.5rem;
@@ -22,15 +27,15 @@
       -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
       box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
       position: relative;
-      i {
-        width: 10px;
-        height: 10px;
+     
+      > i {
+        height: 9px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: lighten($lightblack, 10%);
-        display: none;
+        visibility: hidden;
       }
     }
     #dot-1 {
@@ -50,6 +55,7 @@
     li {
       display: inline-block;
       margin: 0.5rem;
+      cursor: pointer;
     }
   }
 }

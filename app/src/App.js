@@ -4,6 +4,9 @@ import './App.scss';
 import themeContext from './context/theme/themeContext';
 import MenuBar from './components/MenuBar/MenuBar';
 import WindowContainer from './container/WindowContainer';
+import Intro from './components/Intro/Intro';
+
+
 
 function App() {
   const { theme, setTheme } = useContext(themeContext);
@@ -54,6 +57,7 @@ function App() {
     mode && setMode(mode);
   };
 
+
   return (
     <div className='main'>
       <section className='s1'>
@@ -62,9 +66,9 @@ function App() {
       <section className='s2'>
         <div className='container'>
           <div className='greeting-wrapper'>
-            {/* <h1>你好，我是王若宇</h1> */}
+            <Intro intro={[{ data: '你好，我是若宇', delay: 1000 }]} />
           </div>
-          <div className='window-container'>
+          <div>
             <WindowContainer changeTheme={changeTheme} />
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './MenuBar.scss';
 
-function MenuBar() {
+function MenuBar(props) {
   // Hanlde real time
   useEffect(() => {
     function concatZero(timeFrame) {
@@ -14,9 +14,8 @@ function MenuBar() {
       let m = today.getMinutes();
       let s = today.getSeconds();
       let dayArr = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
-      document.querySelector('.menuTime time').innerHTML = `${
-        dayArr[day]
-      } ${concatZero(h)}:${concatZero(m)}:${concatZero(s)}`;
+      document.querySelector('.menuTime time').innerHTML = `${dayArr[day]
+        } ${concatZero(h)}:${concatZero(m)}:${concatZero(s)}`;
     }
     setInterval(() => {
       showTime();
@@ -27,11 +26,6 @@ function MenuBar() {
       <div className='menubar-l'>
         <i className='fab fa-apple'></i>
         <ul>
-          <li>
-            <a target='_blank' href='/pages/drum/index.html'>
-              键盘鼓
-            </a>
-          </li>
           <li>
             <a target='_blank' href='/pages/clock/index.html'>
               电子钟
